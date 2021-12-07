@@ -9,19 +9,30 @@
     <script src="../js/react.development.js"></script>
     <script src="../js/react-dom.development.js"></script>
     <script src="../js/babel.min.js"></script>
+    <script src="../js/sha256.js"></script>
     <script type="text/babel">
         //登录组件
         class Login extends React.Component{
             //登录的回调
             handleLogin = ()=>{
-                    var username = document.getElementById("username").value
-                    var password = document.getElementById("password").value
-                    console.log(username,password);
-                }
+                var username = document.getElementById("username").value
+                var password = document.getElementById("password").value
+                password = sha256_digest(password)
+                console.log(username,password);
+                //向后端发送登录请求
+                // var xhr = new XMLHttpRequest();
+                // xhr.open("get","https://example.com/register?"+"username="+username+"&password="+password,true)
+                // xhr.send("");
+                // xhr.onreadystatechange = function(){
+                //     console.log("1");
+                //     if(xhr.readyState===4 && xhr.status===200){
+                //         var date = xhr.responseText;
+                //         console.log(xhr.responseText)
+                //     }
+                // }
+                // console.log(xhr.responseText)
+            }
             render(){
-                //const {logonNow} = this.props
-                //console.log(logonNow)
-                
                 return(
                     <div className="login">
                         <h1>登录</h1>
@@ -37,8 +48,26 @@
         }
         //注册组件
         class Logon extends React.Component{
+            //注册的回调
+            handleLogon = ()=>{
+                var username = document.getElementById("username").value
+                var password = document.getElementById("password").value
+                password = sha256_digest(password)
+                console.log(username,password);
+                //向后端发送注册请求
+                // var xhr = new XMLHttpRequest();
+                // xhr.open("get","https://example.com/register?"+"username="+username+"&password="+password,true)
+                // xhr.send("");
+                // xhr.onreadystatechange = function(){
+                //     console.log("1");
+                //     if(xhr.readyState===4 && xhr.status===200){
+                //         var date = xhr.responseText;
+                //         console.log(xhr.responseText)
+                //     }
+                // }
+                // console.log(xhr.responseText)
+            }
             render(){
-                //const {logonNow} = this.props
                 return(
                     <div className="logon">
                         <h1>注册</h1>
@@ -46,7 +75,7 @@
                         <br/>
                         <input type="text" id="password"/>
                         <br/>
-                        <button id="logonBtn">注册</button>
+                        <button id="logonBtn" onClick={this.handleLogon}>注册</button>
                         <button id="logonBacktologin" onClick={this.props.updateLogonNow}>返回</button>
                     </div>
                 )
@@ -67,7 +96,6 @@
             render(){
                 //获取logonNow
                 const {logonNow} = this.state
-                //console.log(logonNow);
                 if (this.state.logonNow){
                     return(
                         <div>
