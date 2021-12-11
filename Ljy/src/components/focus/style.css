@@ -3,7 +3,8 @@
     background: rgba(239, 237, 228, 0.66);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 .titleContent {
