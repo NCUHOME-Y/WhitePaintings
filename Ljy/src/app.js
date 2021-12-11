@@ -8,7 +8,10 @@ let nextId = 0;
 export const App = () => {
     const [inputValue, setInputValue] = useState('test');
     const [todoList, setTodoList] = useState([{
-        value: inputValue,
+        value: "xiaoliu",
+        id: 0
+    }, {
+        value: "rao",
         id: 0
     }])
     const handleChange = (e) => {
@@ -23,10 +26,11 @@ export const App = () => {
     return (
         <div>
             <Router>
-                <Route path="/" exact render={() => (<Focus todoList={todoList} />)} />
                 <Route path="/user" component={User} />
-                <Route path="/additem" render={() => (<AddTodo onChange={handleChange} onClick={handleClick} value={inputValue} />)} />
+                {/* <Route path="/additem" render={() => (<AddTodo onChange={handleChange} onClick={handleClick} value={inputValue} />)} /> */}
                 <Route path="/countdown" component={CountDown} />
+                <Route path="/" exact render={() => (<Focus todoList={todoList} />)} />
+
                 {/* <Route path="/" component={ } /> */}
 
             </Router>
