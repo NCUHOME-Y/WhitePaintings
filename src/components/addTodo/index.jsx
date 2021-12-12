@@ -8,7 +8,7 @@ export const AddTodo = (props) => {
         <div className='addBox'>
             <div className='addPage'>
                 <div className="addTitle">
-                    <Link to='/focus'><img alt="" src={retBtn} width="30px" height="30px" /></Link>
+                    <Link to='/club'><img alt="" src={retBtn} width="30px" height="30px" /></Link>
                     <h6>添加事项</h6>
                     <button onClick={props.hanldeClick}>完成</button>
                 </div>
