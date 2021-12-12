@@ -5,20 +5,51 @@ import { Footer } from '../footer';
 import './style.css'
 let nextId = 0;
 export const Focus = () => {
-    const [inputValue, setInputValue] = useState('test');
-    const [todoList, setTodoList] = useState([{
-        value: "xiaoliu",
-        id: 0
-    }, {
-        value: "rao",
-        id: 0
-    }])
+    // const [inputValue, setInputValue] = useState('test');
+    // const [todoList, setTodoList] = useState([{
+    //     value: "xiaoliu",
+    //     id: 0
+    // }, {
+    //     value: "rao",
+    //     id: 0
+    // }])
     const [isAdd, setIsAdd] = useState(false)
-    const handleSubmit = (value) => {
-        // alert(value)
-        setInputValue(value)
+    // const handleSubmit = (value) => {
+    //     // alert(value)
+    //     setInputValue(value)
+    //     setIsAdd(!isAdd)
+    //     setTodoList([...todoList, { value: inputValue, id: nextId }])
+    // }
+
+
+    const [inputValue, setInputValue] = useState('');
+    const [todoList, setTodoList] = useState([
+        {
+            id: 0,
+            content: '写高数作业',
+            done: false
+        }
+    ])
+    const handleChange = (e) => {
+        console.log(e)
+        setInputValue(e.target.value)
+        console.log(inputValue)
+    }
+    // if (inputValue !== '') {
+    //     ifInvolve = false;
+    // }
+    const hanldeClick = () => {
+        // setInputValue('')
         setIsAdd(!isAdd)
-        setTodoList([...todoList, { value: inputValue, id: nextId }])
+        setTodoList(
+            [...todoList,
+            {
+                id: nextId++,
+                content: inputValue,
+                done: false
+            }]
+        )
+        console.log("id:", nextId)
     }
     const Home = () => {
         return (<div>
@@ -30,7 +61,7 @@ export const Focus = () => {
             </div>
             <main>
                 <div className='todoItems'>
-                    {todoList.map(todoItem => <AddItem content={todoItem.value} />)}
+                    {todoList.map(todoItem => <AddItem key={todoItem.id} content={todoItem.content} />)}
                 </div>
             </main>
             <Footer />
@@ -38,7 +69,7 @@ export const Focus = () => {
     }
     return (
         <div>
-            {isAdd ? <AddTodo handleSubmit={handleSubmit} /> : <Home />}
+            {isAdd ? <AddTodo hanldeClick={hanldeClick} handleChange={handleChange} /> : <Home />}
         </div>
     )
 }
