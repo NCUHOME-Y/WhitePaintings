@@ -71,6 +71,18 @@ export default class Community extends Component {
     //切换到《小憩》页面
     changePageToXQ = ()=>{
         this.setState({page:"小憩"})
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open("GET","https://www.errequalsnil.top/community/message",true)
+    //     xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+    //     xhr.send("reset=1");
+    //     xhr.onreadystatechange = function(){
+    //         console.log("1");
+    //         if(xhr.readyState===4 && xhr.status===200){
+    //             console.log(xhr.responseText)
+    //             // this.props.changeisOnline(true)
+    //         }
+    //     }
+    //     console.log(xhr.responseText)
     }
     //切换到《排行榜》页面
     changePageToRANKING = ()=>{

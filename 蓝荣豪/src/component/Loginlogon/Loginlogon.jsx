@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Login from './Login/Login'
 import Logon from './Logon/Logon'
-import "./login.css"
+import "./loginlogon.css"
 
 export default class Loginlogon extends Component {
     //初始化状态
@@ -16,6 +16,7 @@ export default class Loginlogon extends Component {
     //单一页面切换登录、注册    
     render(){
         const {changeisOnline} = this.props
+        console.log(this.props.changeisOnline)
         if (this.state.logonNow){
             return(
                 <div>
@@ -25,7 +26,7 @@ export default class Loginlogon extends Component {
         }else{
             return(
                 <div>
-                    <Login updateLogonNow={this.updateLogonNow} changeisOnline={changeisOnline}/>
+                    <Login updateLogonNow={this.updateLogonNow} changeisOnline={changeisOnline} changeisOnline={this.changeisOnline}/>
                 </div> 
             )
         }
