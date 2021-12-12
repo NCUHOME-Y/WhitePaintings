@@ -1,7 +1,7 @@
 .finishBg {
     width: 100vw;
     height: 100vh;
-    background-color: #E5E5E5;
+    background-color: #F3F1EC;
 }
 
 .finishBox {
@@ -56,6 +56,10 @@
     background: #F3F1EC;
     border-radius: 5px;
     padding: 25px;
+}
+
+.engBox img {
+    margin-left: 10px;
 }
 
 .eng {

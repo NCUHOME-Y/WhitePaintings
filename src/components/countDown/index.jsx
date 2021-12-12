@@ -3,6 +3,8 @@ import "./style.css"
 import board from "../../images/board.png"
 import stop from "../../images/stop.png"
 import { Footer } from '../footer'
+import { Link } from 'react-router-dom';
+let show = false;
 export default class CountDown extends Component {
     constructor(props) {
         super(props)
@@ -38,6 +40,7 @@ export default class CountDown extends Component {
                     minute: minute < 10 ? '0' + minute : minute,
                     second: second < 10 ? '0' + second : second,
                 });
+                if (hour === 0 && minute === 0 && second === 0) { show = true }
             } else clearInterval(this.timer);
         }, 1000);
     };
@@ -49,6 +52,7 @@ export default class CountDown extends Component {
                     <h2 id="countDownTime">{this.state.hour}:{this.state.minute}:{this.state.second}</h2>
                     <button id="countDownStop"><img alt="" src={stop} width="70px" height="70px" /></button>
                 </div>
+                <Link to='finish'><button className='finishBtn' visibility={show ? "visible" : "hidden"}>完成啦੭ ᐕ)੭*⁾⁾</button></Link>
                 <img id="board" alt="" src={board} width="244px" />
                 <Footer />
             </div>
