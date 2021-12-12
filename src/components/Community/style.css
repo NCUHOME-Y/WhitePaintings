@@ -1,0 +1,106 @@
+.community {
+    background-color: #FAFAFA;
+    ;
+}
+
+.community .title {
+    width: 100vw;
+    height: 124px;
+    position: sticky;
+    top: 0;
+    /* left: 0px;
+    top: -132px; */
+    background: #F3F1EC;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: "PingFang SC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: black;
+
+}
+
+.community .title a {
+    text-decoration: none;
+    color: black;
+}
+
+.community .title i {
+    margin: 0 58px;
+}
+
+.community .title .font {
+    padding-top: 74px;
+}
+
+.sharelist {
+    width: 340px;
+    height: 409px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 18px;
+    /* margin: 16px 25px; */
+}
+
+.sharebox {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    align-items: center;
+
+}
+
+.userMessage {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.messageFace {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    margin-right: 10px;
+}
+
+.username {
+    font-family: "PingFang SC";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    /* text-align: center; */
+
+}
+
+.userMessage2 .time {
+    margin-top: 4px;
+    font-family: "PingFang SC";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    /* text-align: center; */
+}
+
+
+
+.Message {
+    margin-top: 17px;
+    font-family: "PingFang SC";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
