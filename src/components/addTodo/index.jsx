@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import retBtn from '../../images/retBtn.png'
 import "./style.css"
 export const AddTodo = (props) => {
-    const [value, setValue] = useState("")
+    // const [value, setValue] = useState("")
     return (
         <div className='addBox'>
             <div className='addPage'>
@@ -13,7 +13,7 @@ export const AddTodo = (props) => {
                 </div>
                 <div className="addValue">
                     <h5>任务名称</h5>
-                    <input onChange={props.handleChange} value={value} />
+                    <input onChange={props.handleChange} value={props.inputValue} />
                     <h5>专注时间</h5>
                     <select disabled={true}>
                         <option>25分钟</option>

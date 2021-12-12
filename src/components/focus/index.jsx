@@ -69,7 +69,7 @@ export const Focus = () => {
     }
     return (
         <div>
-            {isAdd ? <AddTodo hanldeClick={hanldeClick} handleChange={handleChange} /> : <Home />}
+            {isAdd ? <AddTodo hanldeClick={hanldeClick} handleChange={handleChange} value={inputValue} /> : <Home />}
         </div>
     )
 }
