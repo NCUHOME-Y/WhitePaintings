@@ -92,7 +92,7 @@ export default class Community extends Component {
         //获取状态 
         const {page} = this.state
         return(
-            <div className="App">
+            <div className='community'>
                 <div className="title">
                     <a href="#" className='XQ' onClick={this.changePageToXQ}>小憩</a>
                     <a href="#" onClick={this.changePageToRANKING}>专注排行榜</a>

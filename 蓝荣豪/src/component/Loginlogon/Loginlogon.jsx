@@ -19,13 +19,13 @@ export default class Loginlogon extends Component {
         console.log(this.props.changeisOnline)
         if (this.state.logonNow){
             return(
-                <div>
+                <div className='loginlogon'>
                     <Logon updateLogonNow={this.updateLogonNow}/>
                 </div>
             )
         }else{
             return(
-                <div>
+                <div className='loginlogon'>
                     <Login updateLogonNow={this.updateLogonNow} changeisOnline={changeisOnline} changeisOnline={this.changeisOnline}/>
                 </div> 
             )
