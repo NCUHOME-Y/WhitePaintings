@@ -6,7 +6,7 @@ import { AddTodo } from "./components/addTodo"
 import { CountDown } from "./components/countDown"
 import { SystemMsg } from './components/systemMsg';
 import { Finish } from './components/finish';
-let nextId = 0;
+import { UserChange } from './components/userChange';
 export const App = () => {
     return (
         <div>
@@ -19,6 +19,7 @@ export const App = () => {
                     <Route path="/" exact component={Focus} />
                     {/* <Route path="/" component={ } /> */}
                     <Route path='/finish' component={Finish} />
+                    <Route path='/userchange' component={UserChange} />
                 </Switch>
             </Router>
         </div>

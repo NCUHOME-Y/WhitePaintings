@@ -15,7 +15,7 @@ export const User = (params) => {
                 <Link to='/message'><li>系统消息 <img alt='' src={reBtnR} /></li></Link>
                 <li>我的专注分享 <img alt='' src={reBtnR} /></li>
                 <li>详细专注数据 <img alt='' src={reBtnR} /></li>
-                <li>修改个人信息 <img alt='' src={reBtnR} /></li>
+                <Link to='/userchange'><li>修改个人信息 <img alt='' src={reBtnR} /></li></Link>
             </ul>
             <Footer />
         </div>
