@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import retBtn from '../../images/retBtn.png'
 import "./style.css"
 export const AddTodo = (props) => {
@@ -7,7 +8,7 @@ export const AddTodo = (props) => {
         <div className='addBox'>
             <div className='addPage'>
                 <div className="addTitle">
-                    <img alt="" src={retBtn} width="30px" height="30px" />
+                    <Link to='/focus'><img alt="" src={retBtn} width="30px" height="30px" /></Link>
                     <h6>添加事项</h6>
                     <button onClick={props.hanldeClick}>完成</button>
                 </div>
