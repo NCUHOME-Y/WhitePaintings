@@ -15,7 +15,7 @@ export const AddTodo = ({ handleSubmit }) => {
                     <h5>任务名称</h5>
                     <input onChange={(e) => setValue(e.target.value)} value={value} />
                     <h5>专注时间</h5>
-                    <select>
+                    <select disabled={true}>
                         <option>25分钟</option>
                         <option>50分钟</option>
                         <option>75分钟</option>
