@@ -92,8 +92,6 @@
     /* text-align: center; */
 }
 
-
-
 .Message {
     margin-top: 17px;
     font-family: "PingFang SC";
@@ -103,4 +101,63 @@
     line-height: 25px;
     letter-spacing: 0.02em;
     text-align: left;
+}
+
+.Rankinglist {
+    display: flex;
+    flex-direction: column;
+    margin-left: 26px;
+    margin-right: 26px;
+    align-items: center;
+    margin-top: 73px;
+    width: 320px;
+    background-color: #fff;
+}
+
+.rank .id {
+    font-family: Arial Rounded MT Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.rank .username {
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.rank .time {
+    font-family: PingFang SC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.rank {
+    border-bottom: 1px solid #F3F1EC;
+    height: 65px;
+    line-height: 65px;
+    /* padding-left: 44px; */
+    font-family: "PingFang SC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    /* letter-spacing: -0.5px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 }
