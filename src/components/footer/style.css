@@ -6,6 +6,7 @@
     padding: 30px 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     bottom: 0;
     background: #FFFFFF;
     box-shadow: 0px -2px 20px 5px rgba(247, 246, 243, 0.25);
@@ -13,7 +14,7 @@
     border-top-right-radius: 25px;
 }
 
-.footer i {
+/* .footer i {
     display: inline-block;
     width: 34px;
     height: 40px;
@@ -32,4 +33,4 @@
 .footer i.footer-user {
     background: url('../../assets/footer/user.svg') no-repeat center;
     background-size: 100% 100%;
-}
+} */

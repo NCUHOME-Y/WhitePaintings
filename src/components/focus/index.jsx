@@ -52,7 +52,7 @@ export const Focus = () => {
         console.log("id:", nextId)
     }
     const Home = () => {
-        return (<div>
+        return (<div className='focusContainer'>
             <div className="todoTitle">
                 <div className='titleContent'>
                     <span>专注事项</span>
