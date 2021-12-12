@@ -27,7 +27,7 @@
     margin-left: 19px;
 }
 
-ul {
+.userList {
     position: absolute;
     width: 320px;
     left: 22px;
@@ -37,7 +37,7 @@ ul {
     list-style: none;
 }
 
-li {
+.userList li {
     border-bottom: 1px solid #F3F1EC;
     height: 65px;
     line-height: 65px;
@@ -52,7 +52,7 @@ li {
     align-items: center;
 }
 
-li img {
+.userList li img {
     width: 20px;
     height: 20px;
     margin-left: 140px;
