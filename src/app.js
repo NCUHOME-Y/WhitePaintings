@@ -8,13 +8,15 @@ import { SystemMsg } from './components/systemMsg';
 import { Finish } from './components/finish';
 import Community from './components/Community/Community'
 import { UserChange } from './components/userChange';
+import Loginlogon from "./components/Loginlogon/Loginlogon"
 
 export const App = () => {
     return (
         <div>
             <Router>
                 <Switch>
-                    <Route path="/" exact component={Focus} />
+                    <Route path='/' exact component={Loginlogon} />
+                    <Route path="/focus" component={Focus} />
                     <Route path="/user" component={User} />
                     <Route path='/club' component={Community} />
                     {/* <Route path="/additem" render={() => (<AddTodo onChange={handleChange} onClick={handleClick} value={inputValue} />)} /> */}
