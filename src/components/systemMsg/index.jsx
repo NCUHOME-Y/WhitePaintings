@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import retBtn from '../../images/retBtn.png'
 import './style.css'
 export const Message = (params) => {
@@ -15,7 +16,7 @@ export const Message = (params) => {
 export const SystemMsg = (params) => {
     return (
         <div className='msgBox'>
-            <div className='msgTitle'><img alt='' src={retBtn} width={30} height={30} /></div>
+            <Link to='/user'> <div className='msgTitle'><img alt='' src={retBtn} width={30} height={30} /></div></Link>
             <div className='msgList'>
                 <Message />
                 <Message />
