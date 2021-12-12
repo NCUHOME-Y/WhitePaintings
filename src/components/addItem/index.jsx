@@ -4,10 +4,10 @@ import add from "../../images/add.png"
 
 import "./style.css"
 
-export const AddItem = ({ content }) => {
+export const AddItem = (props) => {
     return (
         <div className="todoItem">
-            <div className='todoItem-content'>{content}</div>
+            <div className='todoItem-content'>{props.content}</div>
             <span>25分钟</span>
             <Link to='/countdown'><i></i></Link>
         </div>)
