@@ -9,8 +9,8 @@ export const UserChange = (params) => {
         <div className='UCBox'>
             <div className='UCTitle'><Link to='/user'><img alt='' src={retBtn} width={30} height={30} /></Link></div>
             <ul className='UCList'>
-                <li>修改用户名 <img alt='' src={reBtnR} /></li>
-                <li>修改头像 <img alt='' src={reBtnR} /></li>
+                <li>修改用户名 <img alt='' src={reBtnR} width={20} /></li>
+                <li>修改头像 <img alt='' src={reBtnR} width={20} /></li>
             </ul>
         </div>
     )

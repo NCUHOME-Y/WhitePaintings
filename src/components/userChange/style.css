@@ -31,3 +31,16 @@
     top: 80px;
     left: 27px;
 }
+
+.UCList img {
+    margin-left: 150px;
+}
+
+.UCList {
+    background-color: #fff;
+    width: 340px;
+    border-radius: 25px;
+    position: absolute;
+    left: 16px;
+    top: 140px;
+}
