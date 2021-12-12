@@ -3,14 +3,23 @@ import { AddItem } from '../addItem';
 import { AddTodo } from '../addTodo';
 import { Footer } from '../footer';
 import './style.css'
-export const Focus = (props) => {
+let nextId = 0;
+export const Focus = () => {
+    const [inputValue, setInputValue] = useState('test');
+    const [todoList, setTodoList] = useState([{
+        value: "xiaoliu",
+        id: 0
+    }, {
+        value: "rao",
+        id: 0
+    }])
     const [isAdd, setIsAdd] = useState(false)
-
     const handleSubmit = (value) => {
-        alert(value)
+        // alert(value)
+        setInputValue(value)
         setIsAdd(!isAdd)
+        setTodoList([...todoList, { value: inputValue, id: nextId }])
     }
-
     const Home = () => {
         return (<div>
             <div className="todoTitle">
@@ -21,12 +30,9 @@ export const Focus = (props) => {
             </div>
             <main>
                 <div className='todoItems'>
-                    {props.todoList.map(todoItem => <AddItem content={todoItem.value} />)}
+                    {todoList.map(todoItem => <AddItem content={todoItem.value} />)}
                 </div>
             </main>
-            {/* <div id="todoList">
-                {props.todoList.map(() => <AddItem />)}
-            </div> */}
             <Footer />
         </div>)
     }
@@ -34,6 +40,5 @@ export const Focus = (props) => {
         <div>
             {isAdd ? <AddTodo handleSubmit={handleSubmit} /> : <Home />}
         </div>
-
     )
 }

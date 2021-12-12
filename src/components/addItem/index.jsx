@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import add from "../../images/add.png"
 
 import "./style.css"
@@ -8,6 +9,6 @@ export const AddItem = ({ content }) => {
         <div className="todoItem">
             <div className='todoItem-content'>{content}</div>
             <span>25分钟</span>
-            <i></i>
+            <Link to='/countdown'><i></i></Link>
         </div>)
 }
