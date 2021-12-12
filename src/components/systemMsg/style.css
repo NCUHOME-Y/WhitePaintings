@@ -32,8 +32,8 @@
     /* left: 0px;
     top: -132px; */
     background: #F3F1EC;
-    border-radius: 25px;
-
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .msgTitle img {
