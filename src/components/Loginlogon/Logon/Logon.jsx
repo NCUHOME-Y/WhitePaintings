@@ -1,26 +1,23 @@
 import React, { Component } from 'react'
 import { sha256_digest } from '../sha256'
+import paper from '../../../images/paper.png'
+import axios from 'axios'
 
 export default class Logon extends Component {
     //注册的回调
     handleLogon = () => {
-        var username = document.getElementById("logonusername").value
-        var password = document.getElementById("logonpassword").value
-        password = sha256_digest(password + "whitepainting123")
-        var email = document.getElementById("logonemail").value
-        //向后端发送注册请求 
-        var xhr = new XMLHttpRequest();
-        xhr.open("post", "https://www.errequalsnil.top/passport/register", true)
-        xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded")
-        xhr.send("username=" + username + "&password=" + password + "&email=" + email);
-        xhr.onreadystatechange = function () {
-            console.log("1");
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var date = xhr.responseText;
-                console.log(xhr.responseText)
-            }
-        }
-        console.log(xhr.responseText)
+        const {username,email,password} = this
+        //password.value = sha256_digest(password.value + "whitepainting123")
+        axios.post(
+            "https://www.errequalsnil.top/passport/register",
+            "username="+username.value+"&email="+email.value+"&password="+password.value
+        ).then(response=>{
+            console.log(response)
+            alert("注册成功")
+        }).catch(()=>{
+            console.log("ok")
+            this.props.updateLogonNow()
+        })
     }
     render() {
         return (
@@ -31,25 +28,19 @@ export default class Logon extends Component {
                 </div>
                 <div className='logoninput'>
                     <h2 className='titleusername'>用户名</h2>
-                    <input id='logonusername' className='inputusername' type="text" />
+                    <input ref={(e)=>{this.username=e}} className='inputusername' type="text"/>
                     <h2 className='titleemail'>邮箱</h2>
-                    <input id='logonemail' className='inputemail' type="text" />
-                    <h2 className='titlepassword' >密码</h2>
-                    <input id='logonpassword' className='inputpassword' type="text" />
+                    <input ref={(e)=>{this.email=e}} className='inputemail' type="text"/>
+                    <h2 className='titlepassword'>密码</h2>
+                    <input ref={(e)=>{this.password=e}} className='inputpassword' type="password"/>
                 </div>
                 <button className="logonBtn" onClick={this.handleLogon}>注册</button>
                 <div className='loginbox'>
                     <span>已有账号？</span>
                     <a href="#" onClick={this.props.updateLogonNow}>马上登录</a>
                 </div>
-                {/* <div className='bottom'>
-                    <div className='bottombox1'></div>
-                    <div className='bottombox2'></div>
-                    <div className='bottombox3'></div>
-                </div> */}
+                <img alt='' src={paper} className='paper'/>
             </div>
         )
     }
-
 }
-
