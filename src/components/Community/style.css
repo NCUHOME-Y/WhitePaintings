@@ -1,6 +1,5 @@
 .community {
     background-color: #FAFAFA;
-    ;
 }
 
 .community .title {
@@ -53,7 +52,7 @@
     flex-direction: column;
     /* justify-content: ; */
     align-items: center;
-
+    padding-bottom: 150px;
 }
 
 .userMessage {
@@ -112,6 +111,8 @@
     margin-top: 73px;
     width: 320px;
     background-color: #fff;
+    box-sizing: border-box;
+    padding-bottom: 150px;
 }
 
 .rank .id {
