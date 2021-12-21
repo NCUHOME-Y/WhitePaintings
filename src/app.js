@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Focus } from "./components/focus"
 import { User } from "./components/user"
-import { AddTodo } from "./components/addTodo"
 import CountDown from "./components/countDown"
 import { SystemMsg } from './components/systemMsg';
 import { Finish } from './components/finish';
 import Community from './components/Community/Community'
 import { UserChange } from './components/userChange';
 import Loginlogon from "./components/Loginlogon/Loginlogon"
-
+import { myTotalShare } from './components/myTotalShare';
 export const App = () => {
     return (
         <div>
@@ -25,6 +24,8 @@ export const App = () => {
                     {/* <Route path="/" component={ } /> */}
                     <Route path='/finish' component={Finish} />
                     <Route path='/userchange' component={UserChange} />
+                    <Route path='/mytotalshare' component={myTotalShare} />
+
                 </Switch>
             </Router>
         </div>
