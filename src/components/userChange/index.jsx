@@ -4,7 +4,7 @@ import retBtn from '../../images/retBtn.png'
 import './style.css'
 import { Link } from 'react-router-dom';
 
-export const UserChange = (params) => {
+export const UserChange = () => {
     return (
         <div className='UCBox'>
             <div className='UCTitle'><Link to='/user'><img alt='' src={retBtn} width={30} height={30} /></Link></div>
