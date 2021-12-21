@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import retBtn from '../../images/retBtn.png'
 import './style.css'
-export const Message = (params) => {
+const Message = () => {
     return (
         <div className='msgContainer'>
             <div className='sysTitle'> <span className='sys'>系统提醒</span>
@@ -13,15 +13,14 @@ export const Message = (params) => {
 }
 
 
-export const SystemMsg = (params) => {
+export const SystemMsg = () => {
     return (
         <div className='msgBox'>
-            <Link to='/user'> <div className='msgTitle'><img alt='' src={retBtn} width={30} height={30} /></div></Link>
+            <div className='msgTitle'><Link to='/user'><img alt='' src={retBtn} width={30} height={30} /></Link></div>
             <div className='msgList'>
                 <Message />
                 <Message />
-
             </div>
-        </div>
+        </div >
     )
 }

@@ -20,17 +20,17 @@
 .msgBox {
     height: 100vh;
     width: 100vw;
-    background-color: #e5e5e56f;
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
 }
 
 .msgTitle {
-    /* position: absolute; */
     width: 100vw;
     height: 124px;
-    /* left: 0px;
-    top: -132px; */
+    position: sticky;
+    top: 0;
     background: #F3F1EC;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -38,16 +38,10 @@
 
 .msgTitle img {
     position: fixed;
-    top: 90px;
+    top: 63px;
     left: 27px;
 }
 
-.msgList {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-}
 
 .sys {
     font-family: "PingFang SC";
@@ -65,7 +59,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 17px;
-    /* text-align: center; */
     padding-right: 26px;
 }
 
