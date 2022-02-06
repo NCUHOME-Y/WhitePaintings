@@ -124,10 +124,6 @@
     color: #000000;
 }
 
-/* @font-face{
-    font-family: "bottomword" format('truetype');
-    src:url('./字体.ttf');
-} */
 .bottomword {
     position: absolute;
     width: 298px;
@@ -135,14 +131,8 @@
     left: 46px;
     top: 667px;
     z-index: 1;
-    /* font-family: bottomword; */
     font-family: 'Gabriola';
 }
-
-/* 
-img {
-    width: 100px;
-} */
 
 .bottom {
     position: relative;
@@ -150,11 +140,6 @@ img {
     height: 211px;
     left: 31px;
     top: 504px;
-    /* position: absolute;
-    width: 343.51px;
-    height: 582.96px;
-    left: 23px;
-    top: 634px; */
 }
 
 .bottombox1 {
